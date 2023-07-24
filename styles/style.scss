@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+$primary: hsl(26, 100%, 55%);
+$secondary: hsl(25, 100%, 94%);
+$very-dark-blue: hsl(220, 13%, 13%);
+$dark-grayish-blue: hsl(219, 9%, 45%);
+$grayish-blue: hsl(220, 14%, 75%);
+$light-grayish-blue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: rgb(0, 0, 0, .75);
+
+@font-face {
+  font-family: 'Kumbh-Sans';
+  src: url(../fonts/static/KumbhSans-Regular.ttf);
+}
+body{
+  font-family: 'Kumbh-Sans';
+}
+nav{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  column-gap: 90px;
+
+  .nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    button{
+      border: none;
+      background: transparent;
+    }
+
+    #image-avatar{
+      width: 30px;
+      height: auto;
+    }
+  }
+}
+.thumbnail-container{
+  position: relative;
+  .pics img{
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+  .buttons{
+    padding: 0 15px;
+        
+    button{
+      border-radius: 30px;
+      padding: 12px 15px;
+      border: none;
+      background: #fff;
+      img{
+        width: 9px;
+      }
+    }
+    #left{
+      position: absolute;
+      bottom: 45%;
+    }
+    #right{
+      position: absolute;
+      bottom: 45%;
+      right: 5%;
+    }
+  }
+}
+main{
+  display: flex;
+  flex-direction: column;
+  margin: 15px 25px; 
+
+  .header-container{
+    h5{
+      margin: 10px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $primary;
+    }
+    h1{
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: $very-dark-blue;
+    }
+    p{
+      margin: 15px 0;
+      color: $dark-grayish-blue;
+      font-size: .9rem;
+      line-height: 1.2rem;
+    }
+  }
+  .price-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 15px;
+    align-items: center;
+    margin: 10px 0;
+    h2{
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: $very-dark-blue;
+    }
+    h4{
+      background: rgb(255, 125, 26, .2);
+      width: fit-content;
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-size: .8rem;
+      color: $primary;
+    }
+    h3{
+      text-decoration: line-through;
+      font-size: .8rem;
+      color: $dark-grayish-blue;
+    }
+  }
+  .button-container{
+    margin: 10px 0;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+  
+    .buttons{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      align-items: center;
+      border-radius: 5px;
+      background: $light-grayish-blue;
+      button{
+        border: none;
+        background: none;
+      }
+    }
+    .add-to-cart{
+      button{
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+        background: $primary;
+        color: $secondary;
+        font-family: 'Kumbh-Sans';
+        font-weight: 700;
+        box-shadow: 0 0 1px 5px $primary;
+
+        .test{
+          margin: 0 10px;
+          filter: brightness(0) invert(1);
+          width: 15px
+        }
+      }
+    }
+  }
+}
+
+.attribution { font-size: 11px; text-align: center; 
+  a { color: hsl(228, 45%, 44%); }
+}

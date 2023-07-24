@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Kumbh-Sans";
+  src: url(../fonts/static/KumbhSans-Regular.ttf);
+}
+body {
+  font-family: "Kumbh-Sans";
+}
+
+nav {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  -moz-column-gap: 90px;
+       column-gap: 90px;
+}
+nav .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+nav .nav-container button {
+  border: none;
+  background: transparent;
+}
+nav .nav-container #image-avatar {
+  width: 30px;
+  height: auto;
+}
+
+.thumbnail-container {
+  position: relative;
+}
+.thumbnail-container .pics img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+.thumbnail-container .buttons {
+  padding: 0 15px;
+}
+.thumbnail-container .buttons button {
+  border-radius: 30px;
+  padding: 12px 15px;
+  border: none;
+  background: #fff;
+}
+.thumbnail-container .buttons button img {
+  width: 9px;
+}
+.thumbnail-container .buttons #left {
+  position: absolute;
+  bottom: 45%;
+}
+.thumbnail-container .buttons #right {
+  position: absolute;
+  bottom: 45%;
+  right: 5%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 25px;
+}
+main .header-container h5 {
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: hsl(26, 100%, 55%);
+}
+main .header-container h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: hsl(220, 13%, 13%);
+}
+main .header-container p {
+  margin: 15px 0;
+  color: hsl(219, 9%, 45%);
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+main .price-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  align-items: center;
+  margin: 10px 0;
+}
+main .price-container h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: hsl(220, 13%, 13%);
+}
+main .price-container h4 {
+  background: rgba(255, 125, 26, 0.2);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: hsl(26, 100%, 55%);
+}
+main .price-container h3 {
+  text-decoration: line-through;
+  font-size: 0.8rem;
+  color: hsl(219, 9%, 45%);
+}
+main .button-container {
+  margin: 10px 0;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 10px;
+}
+main .button-container .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  align-items: center;
+  border-radius: 5px;
+  background: hsl(223, 64%, 98%);
+}
+main .button-container .buttons button {
+  border: none;
+  background: none;
+}
+main .button-container .add-to-cart button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  background: hsl(26, 100%, 55%);
+  color: hsl(25, 100%, 94%);
+  font-family: "Kumbh-Sans";
+  font-weight: 700;
+  box-shadow: 0 0 1px 5px hsl(26, 100%, 55%);
+}
+main .button-container .add-to-cart button .test {
+  margin: 0 10px;
+  filter: brightness(0) invert(1);
+  width: 15px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
