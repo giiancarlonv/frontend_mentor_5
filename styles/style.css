@@ -14,7 +14,7 @@ body {
 nav {
   padding: 20px;
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 2fr 1fr;
   -moz-column-gap: 90px;
        column-gap: 90px;
 }
@@ -33,14 +33,23 @@ nav .nav-container #image-avatar {
   height: auto;
 }
 
+@keyframes sliderAnim {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX();
+  }
+}
 .thumbnail-container {
   position: relative;
 }
 .thumbnail-container .pics img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  animation: sliderAnim 0.8s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 18em;
 }
 .thumbnail-container .buttons {
   padding: 0 15px;
@@ -57,11 +66,13 @@ nav .nav-container #image-avatar {
 .thumbnail-container .buttons #left {
   position: absolute;
   bottom: 45%;
+  z-index: 1;
 }
 .thumbnail-container .buttons #right {
   position: absolute;
   bottom: 45%;
   right: 5%;
+  z-index: 1;
 }
 
 main {
@@ -132,21 +143,96 @@ main .button-container .buttons button {
   border: none;
   background: none;
 }
+main .button-container .add-to-cart {
+  margin-bottom: 20px;
+}
 main .button-container .add-to-cart button {
   width: 100%;
-  padding: 15px;
+  padding: 20px 15px;
   border-radius: 5px;
   border: none;
   background: hsl(26, 100%, 55%);
   color: hsl(25, 100%, 94%);
   font-family: "Kumbh-Sans";
   font-weight: 700;
-  box-shadow: 0 0 1px 5px hsl(26, 100%, 55%);
+  box-shadow: 0 10px 30px rgba(255, 125, 26, 0.5);
 }
 main .button-container .add-to-cart button .test {
   margin: 0 10px;
   filter: brightness(0) invert(1);
   width: 15px;
+}
+
+.cart {
+  margin: 10px;
+  background: #fff;
+  border-radius: 8px;
+  position: absolute;
+  width: 95%;
+  top: 70px;
+  z-index: 2;
+}
+.cart .container {
+  display: flex;
+  flex-direction: column;
+}
+.cart .container .label {
+  padding: 20px 15px 20px 20px;
+  border-bottom: 1px solid hsl(223, 64%, 98%);
+}
+.cart .container .label h3 {
+  font-size: 15px;
+}
+.cart .container .product {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 0.3fr;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  align-items: center;
+}
+.cart .container .product h5 {
+  text-transform: capitalize;
+  color: hsl(219, 9%, 45%);
+  font-size: 15px;
+}
+.cart .container .product img {
+  border-radius: 5px;
+  width: 50px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cart .container .product .price-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  width: 80%;
+  margin: 10px 0;
+}
+.cart .container .product p {
+  font-size: 15px;
+}
+.cart .container #delete-cart {
+  border: none;
+  background: transparent;
+}
+.cart .container #delete-cart img {
+  width: 15px;
+}
+.cart .container .checkout {
+  margin: 0 20px 30px 20px;
+}
+.cart .container .checkout button {
+  width: 100%;
+  padding: 15px;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 10px;
+  font-family: "Kumbh-Sans";
+  background: hsl(26, 100%, 55%);
+  color: #fff;
+  font-weight: 700;
 }
 
 .attribution {
