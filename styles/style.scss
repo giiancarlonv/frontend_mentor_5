@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-$primary: hsl(26, 100%, 55%);
+$primary: #ff7d1a;
 $secondary: hsl(25, 100%, 94%);
 $very-dark-blue: hsl(220, 13%, 13%);
 $dark-grayish-blue: hsl(219, 9%, 45%);
@@ -32,8 +32,7 @@ body{
 .js-burger{
   display: none;
 }
-.burger{
-  
+.burger{  
   position: absolute;
   background: $black;
   width: 100vw;
@@ -64,6 +63,16 @@ body{
     }
   }
 }
+.cart-counter{
+  position: absolute;
+  right: 7.5em;
+  top: 2.1em;
+  background: $primary;
+  color: #fff;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-size: 8px;
+}
 nav{
   padding: 20px;
   display: grid;
@@ -75,6 +84,9 @@ nav{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    .cart-counter{
+      
+    }
     button{
       border: none;
       margin: 0 5px;
@@ -120,12 +132,12 @@ nav{
     }
     #left{
       position: absolute;
-      bottom: 45%;
+      bottom: 80%;
       z-index: 1;
     }
     #right{
       position: absolute;
-      bottom: 45%;
+      bottom: 80%;
       right: 5%;
       z-index: 1;
     }
@@ -249,6 +261,17 @@ main{
         font-size: 15px;
       }
     }
+    .empty-cart{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 70px;
+      h5{
+        color: $dark-grayish-blue;
+        font-size: 15px;
+      }
+    }
     .product{
       padding: 20px;
       display: grid;
@@ -305,6 +328,16 @@ main{
   a { color: hsl(228, 45%, 44%); }
 }
 @media (min-width: 1440px) {
+  .cart-counter{
+    position: absolute;
+    right: 31em;
+    top: 3.8em;
+    background: $primary;
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-size: 8px;
+  }
   .line{
     top: 13.8%;
     position: absolute;
@@ -348,6 +381,7 @@ main{
       }
       .cart-avatar{
         display: flex;
+        align-items: center;
         button{
           background: none;
           margin: 0 20px;
@@ -440,5 +474,49 @@ main{
     right: 6%;
     top: 10%;
     box-shadow: 0 5px 10px 0 $black;
+  }
+  .desktop-gallery{
+    display: none;
+    background: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 4;
+    .close-btn{
+      margin: 10px 0 20px 31%;
+      button{
+        background: none;
+        border: none;
+        
+        :hover{
+          transition: filter .9s;
+          cursor: pointer;
+          filter: invert(53%) sepia(80%) saturate(1400%) hue-rotate(345deg) brightness(99%) contrast(105%);
+        }
+      }
+    }
+    .current-pic{
+      width: 30em;
+    }
+    img{
+      border-radius: 10px;
+    }
+    .thumbnails{
+      margin-top: 20px;
+      img{
+        width: 5em;
+        margin: 0 10px;
+      }
+      img:hover{
+        cursor: pointer;
+        transition: .8s;
+        filter: sepia(.5);
+        box-shadow: 0 0 2px 2px $primary;
+      }
+    }
   }
 }

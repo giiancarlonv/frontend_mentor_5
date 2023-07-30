@@ -23,6 +23,25 @@
 </div>
 <div class="line">
 </div>
+
+<section class="desktop-gallery gallery-display" style="display: none;">
+  <div class="close-btn">
+    <button><img src="./images/icon-close.svg" alt=""></button>
+  </div>
+  <div id="current-pic">
+    <img src="./images/image-product-1.jpg" alt="" class="current-pic" >
+  </div>
+  <div class="thumbnails">
+    <img src="./images/image-product-1.jpg" alt="">
+    <img src="./images/image-product-2.jpg" alt="">
+    <img src="./images/image-product-3.jpg" alt="">
+    <img src="./images/image-product-4.jpg" alt="">
+  </div>
+</section>
+
+<!-- QTY COUNT -->
+<div class="cart-counter js-cart-counter">0</div>
+
 <nav>
   <div class="nav-container">
     <button class="js-burger-btn"><img src="./images/icon-menu.svg" alt=""></button>
@@ -43,8 +62,9 @@
         <li>contact</li>
       </ul>
     </div>
+    
     <div class="cart-avatar">
-      <button class="js-cart-btn-desktop cart-logo"><img src="./images/icon-cart.svg" alt="cart" class=""></button>
+        <button class="js-cart-btn-desktop cart-logo"><img src="./images/icon-cart.svg" alt="cart" class=""></button>
       <button><img src="./images/image-avatar.png" alt="dp" id="image-avatar"></button>
     </div>
   </div>
@@ -86,45 +106,34 @@
     </div>
 
     <div class="price-container">
-      <h2>$125.00</h2>
-      <h4>50%</h4>
+      <h2>$<strong class="js-prod-price">125</strong></h2>
+      <h4 class="js-prod-discount">50%</h4>
       <h3>$250.00</h3>
     </div>
 
     <div class="button-container">
       <div class="buttons">
-        <button><img src="./images/icon-minus.svg" alt=""></button>
-        <p>0</p>
-        <button><img src="./images/icon-plus.svg" alt=""></button>
+        <button class="js-minus-btn"><img src="./images/icon-minus.svg" alt=""></button>
+        <p class="qty">0</p>
+        <button class="js-add-btn"><img src="./images/icon-plus.svg" alt=""></button>
       </div>
       <div class="add-to-cart">
-        <button><img src="./images/icon-cart.svg" alt="" class="test"> Add to cart</button>
+        <button class="js-add-to-cart"><img src="./images/icon-cart.svg" alt="" class="test"> Add to cart</button>
       </div>
     </div>
   </main>
 </section>
 
-  <section class="cart js-cart">
-    <div class="container">
+
+  <section class="cart js-cart js-ordered">
+    <div class="container ">
       <div class="label">
         <h3>Cart</h3>
       </div>
-      <div class="product">
-        <div>
-          <img src="./images/image-product-1-thumbnail.jpg" alt="sample_image">
+      <div class="empty-cart">
+        <div class="">
+          <h5>Your cart is empty.</h5>
         </div>
-        <div>
-          <h5>fall limited edition sneakers</h5>
-          <div class="price-container">
-            <p>${price}</p>
-            <p>x ${QTY}</p>
-            <p>${total}</p>
-          </div>
-        </div>
-        <button id="delete-cart"><img src="./images/icon-delete.svg" alt="" ></button>
-      </div>
-      <div class="checkout">
-        <button>checkout</button>
       </div>
     </div>
   </section>
@@ -133,9 +142,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
-
-
-
   <script src="script/script.js"> </script>
 </body>
 </html>

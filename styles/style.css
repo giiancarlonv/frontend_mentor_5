@@ -57,6 +57,17 @@ body {
   font-weight: 700;
 }
 
+.cart-counter {
+  position: absolute;
+  right: 7.5em;
+  top: 2.1em;
+  background: #ff7d1a;
+  color: #fff;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-size: 8px;
+}
+
 nav {
   padding: 20px;
   display: grid;
@@ -115,12 +126,12 @@ nav .nav-desktop {
 }
 .thumbnail-container .buttons #left {
   position: absolute;
-  bottom: 45%;
+  bottom: 80%;
   z-index: 1;
 }
 .thumbnail-container .buttons #right {
   position: absolute;
-  bottom: 45%;
+  bottom: 80%;
   right: 5%;
   z-index: 1;
 }
@@ -134,7 +145,7 @@ main .header-container h5 {
   margin: 10px 0;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: hsl(26, 100%, 55%);
+  color: #ff7d1a;
 }
 main .header-container h1 {
   font-weight: 700;
@@ -167,7 +178,7 @@ main .price-container h4 {
   padding: 2px 7px;
   border-radius: 5px;
   font-size: 0.8rem;
-  color: hsl(26, 100%, 55%);
+  color: #ff7d1a;
 }
 main .price-container h3 {
   text-decoration: line-through;
@@ -201,7 +212,7 @@ main .button-container .add-to-cart button {
   padding: 20px 15px;
   border-radius: 5px;
   border: none;
-  background: hsl(26, 100%, 55%);
+  background: #ff7d1a;
   color: hsl(25, 100%, 94%);
   font-family: "Kumbh-Sans";
   font-weight: 700;
@@ -241,6 +252,17 @@ main .button-container .add-to-cart button .test {
   border-bottom: 1px solid hsl(223, 64%, 98%);
 }
 .cart .container .label h3 {
+  font-size: 15px;
+}
+.cart .container .empty-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.cart .container .empty-cart h5 {
+  color: hsl(219, 9%, 45%);
   font-size: 15px;
 }
 .cart .container .product {
@@ -290,7 +312,7 @@ main .button-container .add-to-cart button .test {
   border: none;
   border-radius: 10px;
   font-family: "Kumbh-Sans";
-  background: hsl(26, 100%, 55%);
+  background: #ff7d1a;
   color: #fff;
   font-weight: 700;
 }
@@ -304,6 +326,16 @@ main .button-container .add-to-cart button .test {
 }
 
 @media (min-width: 1440px) {
+  .cart-counter {
+    position: absolute;
+    right: 31em;
+    top: 3.8em;
+    background: #ff7d1a;
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-size: 8px;
+  }
   .line {
     top: 13.8%;
     position: absolute;
@@ -343,12 +375,13 @@ main .button-container .add-to-cart button .test {
   nav .nav-desktop .image_list ul li:hover {
     transition: color 0.5s, box-shadow 0.5s;
     color: hsl(220, 13%, 13%);
-    box-shadow: 0 5px 0 0 hsl(26, 100%, 55%);
+    box-shadow: 0 5px 0 0 #ff7d1a;
     line-height: 100px;
     cursor: pointer;
   }
   nav .nav-desktop .cart-avatar {
     display: flex;
+    align-items: center;
   }
   nav .nav-desktop .cart-avatar button {
     background: none;
@@ -364,7 +397,7 @@ main .button-container .add-to-cart button .test {
   }
   nav .nav-desktop .cart-avatar button #image-avatar:hover {
     transition: box-shadow 0.3s;
-    box-shadow: 0 0 0 2px hsl(26, 100%, 55%);
+    box-shadow: 0 0 0 2px #ff7d1a;
     border-radius: 25px;
   }
   nav .nav-desktop .cart-avatar .cart-logo:hover {
@@ -436,5 +469,48 @@ main .button-container .add-to-cart button .test {
     right: 6%;
     top: 10%;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.75);
+  }
+  .desktop-gallery {
+    display: none;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 4;
+  }
+  .desktop-gallery .close-btn {
+    margin: 10px 0 20px 31%;
+  }
+  .desktop-gallery .close-btn button {
+    background: none;
+    border: none;
+  }
+  .desktop-gallery .close-btn button :hover {
+    transition: filter 0.9s;
+    cursor: pointer;
+    filter: invert(53%) sepia(80%) saturate(1400%) hue-rotate(345deg) brightness(99%) contrast(105%);
+  }
+  .desktop-gallery .current-pic {
+    width: 30em;
+  }
+  .desktop-gallery img {
+    border-radius: 10px;
+  }
+  .desktop-gallery .thumbnails {
+    margin-top: 20px;
+  }
+  .desktop-gallery .thumbnails img {
+    width: 5em;
+    margin: 0 10px;
+  }
+  .desktop-gallery .thumbnails img:hover {
+    cursor: pointer;
+    transition: 0.8s;
+    filter: sepia(0.5);
+    box-shadow: 0 0 2px 2px #ff7d1a;
   }
 }/*# sourceMappingURL=style.css.map */
