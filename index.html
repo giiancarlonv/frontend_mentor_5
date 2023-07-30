@@ -9,46 +9,73 @@
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
-<!--
-  Collections
-  Men
-  Women
-  About
-  Contact-->
+<div class="burger js-burger">
+  <div class="container">
+    <button><img src="./images/icon-close.svg" alt=""></button>
+    <ul>
+      <li>Collections</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>  
+  </div>
+</div>
+<div class="line">
+</div>
 <nav>
   <div class="nav-container">
-    <button><img src="./images/icon-menu.svg" alt=""></button>
-    <button><img src="./images/logo.svg" alt="logo"></button>
+    <button class="js-burger-btn"><img src="./images/icon-menu.svg" alt=""></button>
+    <button class="logo-btn"><img src="./images/logo.svg" alt="logo"></button>
   </div>
   <div class="nav-container">
-    <button><img src="./images/icon-cart.svg" alt="cart"></button>
+    <button class="js-cart-btn"><img src="./images/icon-cart.svg" alt="cart"></button>
     <button><img src="./images/image-avatar.png" alt="dp" id="image-avatar"></button>
-    
   </div>
+  <div class="nav-desktop">
+    <div class="image_list">
+      <img src="./images/logo.svg" alt="">
+      <ul class="list">
+        <li>Collections</li>
+        <li>men</li>
+        <li>women</li>
+        <li>about</li>
+        <li>contact</li>
+      </ul>
+    </div>
+    <div class="cart-avatar">
+      <button class="js-cart-btn-desktop cart-logo"><img src="./images/icon-cart.svg" alt="cart" class=""></button>
+      <button><img src="./images/image-avatar.png" alt="dp" id="image-avatar"></button>
+    </div>
+  </div>
+
 </nav>
-<div class="test">
-  
-</div>
 
   <section class="thumbnail-container">
     <div class="buttons">
       <button id="left"><img src="./images/icon-previous.svg" alt=""></button>
       <button id="right"><img src="./images/icon-next.svg" alt=""></button>
     </div>
-    <div class="pics">
-      <img src="./images/image-product-1.jpg" alt="thumbnail pics">
+    <div class="desktop-pics-container">
+      <div class="pics" >
+        <img src="./images/image-product-1.jpg" alt="thumbnail pics" id="header-pic">
+      </div>
+      <div class="pics-below">
+        <div class="pics">
+          <img src="./images/image-product-1.jpg" alt="thumbnail pics">
+        </div>
+        <div class="pics">
+          <img src="./images/image-product-2.jpg" alt="thumbnail pics">
+        </div>
+        <div class="pics">
+          <img src="./images/image-product-3.jpg" alt="thumbnail pics">
+        </div>
+        <div class="pics">
+          <img src="./images/image-product-4.jpg" alt="thumbnail pics">
+        </div>
+      </div>
+      
     </div>
-    <div class="pics">
-      <img src="./images/image-product-2.jpg" alt="thumbnail pics">
-    </div>
-    <div class="pics">
-      <img src="./images/image-product-3.jpg" alt="thumbnail pics">
-    </div>
-    <div class="pics">
-      <img src="./images/image-product-4.jpg" alt="thumbnail pics">
-    </div>
-
-  </section>
 
   <main>
     <div class="header-container">
@@ -75,8 +102,9 @@
       </div>
     </div>
   </main>
-  
-  <section class="cart">
+</section>
+
+  <section class="cart js-cart">
     <div class="container">
       <div class="label">
         <h3>Cart</h3>
@@ -100,17 +128,6 @@
       </div>
     </div>
   </section>
-
-  
-
-  
-
-  
-  
-  
-
-  
-  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
